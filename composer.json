@@ -17,7 +17,7 @@
         "laravel/pail": "^1.1",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.58",
-        "mll-lab/laravel-graphql-playground": "^1.1",
+        "mll-lab/laravel-graphiql": "^4.1",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.1",
         "phpunit/phpunit": "^11.0.1"

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bffc91fcf540b72f0211ab5cad268fcf",
+    "content-hash": "22131d8ee8cb46405f93cc5e7f9649c2",
     "packages": [
         {
             "name": "brick/math",
@@ -6837,37 +6837,47 @@
             "time": "2026-04-27T13:38:34+00:00"
         },
         {
-            "name": "mll-lab/laravel-graphql-playground",
-            "version": "v1.1.0",
+            "name": "mll-lab/laravel-graphiql",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mll-lab/laravel-graphql-playground.git",
-                "reference": "8b238625a0e432746ddada9ae87406e7cfdc326b"
+                "url": "https://github.com/mll-lab/laravel-graphiql",
+                "reference": "b6426ea4471aa60d68a560945aa7232193c4a34f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mll-lab/laravel-graphql-playground/zipball/8b238625a0e432746ddada9ae87406e7cfdc326b",
-                "reference": "8b238625a0e432746ddada9ae87406e7cfdc326b",
+                "url": "https://api.github.com/repos/mll-lab/laravel-graphiql/zipball/b6426ea4471aa60d68a560945aa7232193c4a34f",
+                "reference": "b6426ea4471aa60d68a560945aa7232193c4a34f",
                 "shasum": ""
             },
             "require": {
-                "laravel/framework": ">=5.1.0",
-                "php": ">=7"
+                "illuminate/console": "^9 || ^10 || ^11 || ^12 || ^13",
+                "illuminate/contracts": "^9 || ^10 || ^11 || ^12 || ^13",
+                "illuminate/support": "^9 || ^10 || ^11 || ^12 || ^13",
+                "php": "^8"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.12"
+                "ergebnis/composer-normalize": "^2.45",
+                "larastan/larastan": "^2.9.14 || ^3.1",
+                "laravel/framework": "^9 || ^10 || ^11 || ^12 || ^13",
+                "mll-lab/php-cs-fixer-config": "^5.10",
+                "orchestra/testbench": "^7.52 || ^8.33 || ^9.11 || ^10 || ^11",
+                "phpstan/extension-installer": "^1.4.3",
+                "phpstan/phpstan": "^1.12.20 || ^2.1.7",
+                "phpstan/phpstan-phpunit": "^1.4.2 || ^2.0.6",
+                "phpunit/phpunit": "^9.6.22 || ^10.5.45 || ^11.5.15 || ^12.0.10"
             },
             "type": "library",
             "extra": {
                 "laravel": {
                     "providers": [
-                        "MLL\\GraphQLPlayground\\GraphQLPlaygroundServiceProvider"
+                        "MLL\\GraphiQL\\GraphiQLServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "MLL\\GraphQLPlayground\\": "src/"
+                    "MLL\\GraphiQL\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -6880,18 +6890,13 @@
                     "email": "benedikt@franke.tech"
                 }
             ],
-            "description": "Easily integrate GraphQL Playground into your Laravel project",
+            "description": "Easily integrate GraphiQL into your Laravel project",
             "keywords": [
+                "graphiql",
                 "graphql",
-                "graphql-playground",
                 "laravel"
             ],
-            "support": {
-                "issues": "https://github.com/mll-lab/laravel-graphql-playground/issues",
-                "source": "https://github.com/mll-lab/laravel-graphql-playground/tree/master"
-            },
-            "abandoned": "mll-lab/laravel-graphiql",
-            "time": "2019-07-05T12:09:26+00:00"
+            "time": "2026-03-18T14:57:55+00:00"
         },
         {
             "name": "mockery/mockery",
