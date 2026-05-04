@@ -28,11 +28,11 @@ final class CreatePostTest extends TestCase
         $user = User::factory()->create();
 
         $this->actingAs($user)
-            ->graphQL(self::MUTATION, ['body' => 'Hello, world!'])
+            ->graphQL(self::MUTATION, ['body' => 'Hello, world! I\'m a long text thank you for reading.'])
             ->assertJson([
                 'data' => [
                     'createPost' => [
-                        'body' => 'Hello, world!',
+                        'body' => 'Hello, world! I\'m a long text thank you for reading.',
                         'author' => ['username' => $user->username],
                     ],
                 ],
@@ -50,7 +50,7 @@ final class CreatePostTest extends TestCase
 
     public function test_unauthenticated_user_cannot_create_a_post(): void
     {
-        $this->graphQL(self::MUTATION, ['body' => 'Sneaky post'])
+        $this->graphQL(self::MUTATION, ['body' => str_repeat('a', 50)])
             ->assertGraphQLError(new AuthenticationException);
 
     }
