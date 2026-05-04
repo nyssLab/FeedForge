@@ -22,7 +22,7 @@ type Query {
     userProfile(username: String! @eq): User @find
 
     "A paginated list of all posts across the platform, newest first."
-    feed: [Post!]! @paginate(defaultCount: 15)
+    feed: [Post!]! @paginate(defaultCount: 15, builder: "App\\GraphQL\\Queries\\FeedQuery@builder")
 }
 
 type Mutation {
