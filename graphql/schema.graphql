@@ -36,8 +36,7 @@ type Mutation {
     createPost(input: CreatePostInput! @spread): Post
     @guard
     @validator
-    @create
-    @inject(context: "user.id", name: "user_id")
+    @field(resolver: "App\\GraphQL\\Mutations\\CreatePostMutation@resolve")
 }
 
 input CreatePostInput {
