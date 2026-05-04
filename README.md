@@ -2,6 +2,9 @@
 
 A backend-only micro-blog GraphQL API built with Laravel 11, PHP 8.2, SQLite, and GraphQL via Lighthouse. The project exposes a small Twitter-like API with a global feed, user profile lookup by username, login, and authenticated post creation. The focus of this assignment is clean Laravel architecture, GraphQL schema design, validation, and efficient relational data fetching.
 
+## A short Video walkthrough:
+https://www.youtube.com/watch?v=ENKxMTq5EtI
+
 ## Setup
 
 ### Option 1: Run with Docker / Laravel Sail
