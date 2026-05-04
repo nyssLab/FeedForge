@@ -19,6 +19,7 @@ final class PostRepository implements PostRepositoryInterface
     public function feedQuery(): Builder
     {
         return Post::query()
+            ->with('user')
             ->latest();
     }
 }
