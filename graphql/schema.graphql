@@ -24,3 +24,13 @@ type Query {
     "A paginated list of all posts across the platform, newest first."
     feed: [Post!]! @paginate(defaultCount: 15)
 }
+
+type Mutation {
+    "Create a new post."
+    createPost(input: CreatePostInput! @spread): Post @create
+}
+
+input CreatePostInput {
+    user_id: ID!
+    body: String! @rules(apply: ["required", "string", "min:20", "max:280"])
+}
