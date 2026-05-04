@@ -26,11 +26,19 @@ type Query {
 }
 
 type Mutation {
-    "Create a new post."
-    createPost(input: CreatePostInput! @spread): Post @create
+    "Quick login mutation so we can get a Sanctum token to test with"
+    login(
+        email:    String! @rules(apply: ["required", "email"])
+        password: String! @rules(apply: ["required"])
+    ): String @field(resolver: "App\\GraphQL\\Mutations\\Login")
+
+    "Create a new post. Requires an authenticated user."
+    createPost(input: CreatePostInput! @spread): Post
+    @guard
+    @validator
+    @field(resolver: "App\\GraphQL\\Mutations\\CreatePostMutation@resolve")
 }
 
 input CreatePostInput {
-    user_id: ID!
-    body: String! @rules(apply: ["required", "string", "min:20", "max:280"])
+    body: String!
 }
